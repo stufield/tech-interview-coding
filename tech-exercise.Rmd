@@ -1,0 +1,42 @@
+---
+title: "Technical Interview: Coding"
+author: "Candidate Name"
+output: rmarkdown::html_vignette
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+ collapse = TRUE,
+ comment = "#>"
+)
+```
+
+
+# Instructions
+
+1. Clone the repository and create a branch for your work
+
+
+## Questions
+1. What are the steps or pseudocode for producing the final table?
+1. How might you design this to make it automated/user-friendly?
+1. How would you ensure that the code/automation is robust or less susceptible to breaking?
+
+## Answer #1
+Describe solution here ...
+
+```{r}
+#
+# coding solution here ...
+#
+```
+
+## Answer #2
+
+```{r}
+#
+# coding solution here ...
+#
+```
+
+# Answer #3
