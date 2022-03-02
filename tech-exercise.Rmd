@@ -1,7 +1,17 @@
 ---
 title: "Technical Interview: Coding"
 author: "Candidate Name"
-output: rmarkdown::html_vignette
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_document:
+    fig_caption: yes
+    code_folding: show
+    number_sections: no
+    toc: yes
+    toc_float:
+      collapsed: no
+ratio: '9:16'
+fontsize: 13pt
 ---
 
 ```{r setup, include = FALSE}
@@ -9,34 +19,69 @@ knitr::opts_chunk$set(
  collapse = TRUE,
  comment = "#>"
 )
+#
+# attach any required libraries here
+#
 ```
 
 
 # Instructions
 
 1. Clone the repository and create a branch for your work
+1. Rename this file as instructed in the `README`
+1. Add any R packages you might require in the `setup` chunk
+1. Load necessary data into an R work space
+1. Read Questions below and complete the answers in the code chunks provided
+
+
+
+-----
+
+
+## Load Data
+
+Below write the code required to load the necessary data into an R work space.
+
+```{r load}
+#
+# r code for loading external files
+#
+```
 
 
 ## Questions
-1. What are the steps or pseudocode for producing the final table?
-1. How might you design this to make it automated/user-friendly?
-1. How would you ensure that the code/automation is robust or less susceptible to breaking?
+
+1. What are the steps for producing the final table (see `README`)?
+1. Save the resulting table as `output.csv` and add to your branch
+1. How might you design this to make it automated and/or user-friendly?
+1. How would you ensure that the code/automation is robust or
+   less susceptible to breaking?
+
+
+--------
+
 
 ## Answer #1
-Describe solution here ...
 
-```{r}
+Describe (in words) here ...
+
+```{r Q1}
 #
-# coding solution here ...
+# coding solution here ... return table
 #
 ```
+
 
 ## Answer #2
+Describe automation ... 
 
-```{r}
-#
-# coding solution here ...
-#
-```
+* 
+*
 
 # Answer #3
+Describe fragile steps ... how to make more robust ... 
+
+* 
+*
+
+---------
