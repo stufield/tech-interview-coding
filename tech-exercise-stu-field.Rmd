@@ -1,6 +1,6 @@
 ---
 title: "Technical Interview: Coding"
-author: "Candidate Name"
+author: "Gandalf The Grey"
 date: "`r Sys.Date()`"
 output:
   rmarkdown::html_document:
@@ -19,9 +19,8 @@ knitr::opts_chunk$set(
  collapse = TRUE,
  comment = "#>"
 )
-#
-# attach any required libraries here
-#
+library(dplyr)
+library(tidyr)
 ```
 
 
@@ -43,9 +42,8 @@ knitr::opts_chunk$set(
 Below write the code required to load the necessary data into an R work space.
 
 ```{r load}
-#
-# r code for loading external files
-#
+preds <- read.csv("Predictions.csv")
+bar_df <- read.csv("Barcode.csv")
 ```
 
 
@@ -66,22 +64,25 @@ Below write the code required to load the necessary data into an R work space.
 Describe (in words) here ...
 
 ```{r Q1}
-#
-# coding solution here ... return table
-#
+tbl <- gather(bar_df, "orig", "barcode", -SubjectId) |> select(-orig)
+joined <- left_join(tbl, preds, by = "barcode") |> group_by(SubjectId)
+out <- summarise(joined, mean_testA = mean(testA), mean_testB = mean(testB))
+write.csv(out, "output.csv", quote = FALSE)
+out
 ```
 
 
 ## Answer #2
 Describe automation ... 
 
+* Shiny App
 * 
-*
+
 
 # Answer #3
 Describe fragile steps ... how to make more robust ... 
 
+* unit tests
 * 
-*
 
 ---------
